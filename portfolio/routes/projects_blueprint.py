@@ -6,7 +6,7 @@ projects_list = [
     {
         "technologies": "Python | Flask",
         "description": "My first ever portfolio project. Created it under the guidance of Jose Salvatierra during 'Web Developer Bootcamp with Flask and Python in 2024' Udemy course.",
-        "image": "NoteUP.png",
+        "image": "noteup.png",
         "slug": "noteup"
     }
 ]
