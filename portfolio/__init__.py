@@ -16,5 +16,3 @@ def Home_redrect():
 @app.errorhandler(404)
 def Not_found(error):
     return render_template("error/404.html"), 404
-
-app.run()
