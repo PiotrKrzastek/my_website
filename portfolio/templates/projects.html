@@ -1,0 +1,15 @@
+{% from "macros/project_macros.jinja2" import project_card %}
+
+{% extends "base.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/projects_style.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        {% for project in projects %}
+            {{ project_card(project.technologies, project.description, url_for('static', filename=project.image), "/projects/" + project.slug, frame=True)}}
+        {% endfor %}
+    </main>
+{% endblock %}

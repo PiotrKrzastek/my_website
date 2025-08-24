@@ -1,0 +1,102 @@
+{% from "macros/project_macros.jinja2" import project_card %}
+
+{% extends "base.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article_style.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__banner">
+            <img class="main__banner-image" src="{{ url_for('static', filename='noteup.png') }}">
+            <h1 class="main__banner-glow"></h1>
+        </div>
+
+        <section class="main__about-section-main">
+            <h1 class="main__section-header" >NoteUP</h1>
+            <p class="main__section-content">
+                NoteUP is a simple web application where users can add notes to document their daily life. It’s built with HTML, CSS, Python, and Flask. This was my first project from the Udemy course
+                <strong><a class="main__section-link" target="_blank" href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">Web Developer Bootcamp with Flask and Python in 2024</a></strong>
+                and at the same time my first professional step towards my full-stack developer journey.
+            </p>
+        </section>
+
+        <section class="main__about-section-image">
+            <img class="main__section-image bordered" alt="trophy" src="https://static.vecteezy.com/system/resources/previews/006/245/985/non_2x/trophy-cup-flat-style-icon-illustration-vector.jpg">
+            <div class="main__section-text">
+                <h2 class="main__section-header">Why was it written?</h2>
+                <p class="main__section-content">
+                   This app was mainly written for the sake of taking the course. I consider even smallest step towards advancement a victory.
+                   Even though this app is small and relatively easy to make I was sure there is something I could learn from this experience.
+                </p>
+            </div>
+        </section>
+
+        <section class="main__about-section-image">
+            <div class="main__section-text">
+                <h2 class="main__section-header" >What I learned?</h2>
+                <p class="main__section-content">
+                    Even before developing this app, I knew some of the technologies used. I still learned new things — for example, using
+                    <strong><a target="_blank"  class="main__section-link" href="https://www.figma.com">Figma</a></strong> to create clear, responsive designs and prototypes before writing any code.
+                    I’m also excited to use these skills in future projects and collaborate effectively with teammates.
+                </p>
+            </div>
+            <img class="main__section-image bordered" alt="figma logo" src="https://logos-world.net/wp-content/uploads/2024/09/Figma-Logo.png">
+        </section>
+
+        <section class="main__about-section centered">
+            <h1 class="main__section-header" >Technologies used</h1>
+                <ul class="main__section-list">
+                    <li class="main__section-list-element">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-filetype-py" viewBox="0 0 16 16">
+                            <path d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6"/>
+                        </svg>
+                        &nbsp;Python/Flask
+                    </li>
+                    <li class="main__section-list-element">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                            <path d="M5.854 4.854a.5.5 0 1 0-.708-.708l-3.5 3.5a.5.5 0 0 0 0 .708l3.5 3.5a.5.5 0 0 0 .708-.708L2.707 8zm4.292 0a.5.5 0 0 1 .708-.708l3.5 3.5a.5.5 0 0 1 0 .708l-3.5 3.5a.5.5 0 0 1-.708-.708L13.293 8z"/>
+                        </svg>
+                        &nbsp;HTML
+                    </li>
+                    <li class="main__section-list-element">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14 0a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V0zM4.59 7.498q-.908 0-1.455.508-.547.507-.547 1.484v3.106q0 .986.527 1.484t1.406.498q.576 0 1.016-.224.45-.225.703-.674.255-.45.254-1.114v-.185h-1.22v.176q0 .449-.186.683t-.527.235q-.372-.01-.557-.264-.186-.255-.186-.752V9.686q0-.547.166-.811.177-.264.577-.264.321 0 .517.225.195.224.195.693v.205h1.23V9.52q0-.674-.243-1.124a1.55 1.55 0 0 0-.664-.673q-.42-.225-1.006-.225m4.214-.01q-.586 0-1.006.244a1.67 1.67 0 0 0-.635.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.304.42.967.732l.469.215q.44.186.625.43.186.244.186.635 0 .478-.166.703-.157.224-.528.224-.36 0-.547-.244-.185-.243-.205-.752H6.87q.02.996.498 1.524.479.527 1.387.527t1.416-.518.508-1.484q0-.81-.332-1.289-.333-.479-1.045-.79l-.45-.196q-.39-.166-.556-.381-.165-.214-.166-.576 0-.4.166-.596.175-.195.508-.195.36 0 .508.234.156.234.175.703h1.123q-.03-.976-.498-1.484-.468-.518-1.308-.518m4.057 0q-.585 0-1.006.244a1.67 1.67 0 0 0-.634.674 2.1 2.1 0 0 0-.225.996q0 .753.293 1.182.303.42.967.732l.469.215q.438.186.625.43.185.244.185.635 0 .478-.166.703-.156.224-.527.224-.361.001-.547-.244-.186-.243-.205-.752h-1.162q.02.996.498 1.524.479.527 1.386.527.909 0 1.417-.518.507-.517.507-1.484 0-.81-.332-1.289t-1.045-.79l-.449-.196q-.39-.166-.556-.381-.166-.214-.166-.576 0-.4.165-.596.177-.195.508-.195.361 0 .508.234.156.234.176.703h1.123q-.03-.976-.498-1.484-.47-.518-1.309-.518"/>
+                        </svg>
+                        &nbsp;CSS</li>
+                    <li class="main__section-list-element">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-code" viewBox="0 0 16 16">
+                            <path d="M4.318 2.687C5.234 2.271 6.536 2 8 2s2.766.27 3.682.687C12.644 3.125 13 3.627 13 4c0 .374-.356.875-1.318 1.313C10.766 5.729 9.464 6 8 6s-2.766-.27-3.682-.687C3.356 4.875 3 4.373 3 4c0-.374.356-.875 1.318-1.313M13 5.698V7c0 .374-.356.875-1.318 1.313C10.766 8.729 9.464 9 8 9s-2.766-.27-3.682-.687C3.356 7.875 3 7.373 3 7V5.698c.271.202.58.378.904.525C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777A5 5 0 0 0 13 5.698M14 4c0-1.007-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1s-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4v9c0 1.007.875 1.755 1.904 2.223C4.978 15.71 6.427 16 8 16s3.022-.289 4.096-.777C13.125 14.755 14 14.007 14 13zm-1 4.698V10c0 .374-.356.875-1.318 1.313C10.766 11.729 9.464 12 8 12s-2.766-.27-3.682-.687C3.356 10.875 3 10.373 3 10V8.698c.271.202.58.378.904.525C4.978 9.71 6.427 10 8 10s3.022-.289 4.096-.777A5 5 0 0 0 13 8.698m0 3V13c0 .374-.356.875-1.318 1.313C10.766 14.729 9.464 15 8 15s-2.766-.27-3.682-.687C3.356 13.875 3 13.373 3 13v-1.302c.271.202.58.378.904.525C4.978 12.71 6.427 13 8 13s3.022-.289 4.096-.777c.324-.147.633-.323.904-.525"/>
+                        </svg>
+                        &nbsp;MongoDB
+                    </li>
+                </ul>
+        </section>
+
+        <section class="main__about-section">
+            <h2 class="main__section-header" >Future</h2>
+            <p class="main__section-content">
+                While I plan to focus on new projects, if I were to expand this app further, I would add a user system to allow personalized accounts and note management.
+                Each project builds on the last, so future developments will continue to improve my skills and approach.
+            </p>
+        </section>
+
+        <section class="main__about-section centered" style="width: 100%">
+            <h1 class="main__section-header">Links</h1>
+                    <p class="main__name">Repository
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                        </svg>
+                    </p>
+                    <a class="main__link" target="_blank" href="https://github.com/PiotrKrzastek/NoteUp-project">github.com/PiotrKrzastek/NoteUp-project</a>
+                    <p class="main__name">Live website
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                            <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M2.04 4.326c.325 1.329 2.532 2.54 3.717 3.19.48.263.793.434.743.484q-.121.12-.242.234c-.416.396-.787.749-.758 1.266.035.634.618.824 1.214 1.017.577.188 1.168.38 1.286.983.082.417-.075.988-.22 1.52-.215.782-.406 1.48.22 1.48 1.5-.5 3.798-3.186 4-5 .138-1.243-2-2-3.5-2.5-.478-.16-.755.081-.99.284-.172.15-.322.279-.51.216-.445-.148-2.5-2-1.5-2.5.78-.39.952-.171 1.227.182.078.099.163.208.273.318.609.304.662-.132.723-.633.039-.322.081-.671.277-.867.434-.434 1.265-.791 2.028-1.12.712-.306 1.365-.587 1.579-.88A7 7 0 1 1 2.04 4.327Z"/>
+                        </svg>
+                    </p>
+                    <a class="main__link" target="_blank" href="https://noteup-project.onrender.com/">noteup-project.onrender.com/</a>
+        </section>
+
+    </main>
+{% endblock %}

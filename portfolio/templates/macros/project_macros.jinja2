@@ -1,0 +1,9 @@
+{% macro project_card(technologies, description, image, link, frame=False) %}
+    <article class="main__card">
+        <a class=main__card-link href="{{link}}">
+            <img class="main__card-image {% if frame %} image_frame {% endif %} " src="{{image}}" alt="project photo">
+            <h4 class="main__card-header">{{ technologies }}</h4>
+            <p class="main__card-description"> {{ description }}</p>
+        </a>
+    </article>
+{% endmacro%}

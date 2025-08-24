@@ -1,0 +1,27 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 20px;
+}
+
+.main__name {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__link {
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: black;
+    margin-bottom: 2.5rem;
+}
+
+.main__link:hover {
+    transition: all .2s ease-in-out;
+    font-size: 22px;
+    cursor: pointer;
+}

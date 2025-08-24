@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base_style.css') }}">
+    <title>Krzastek - {{ title }}</title>
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+    <div class="main_body">
+        <header class="header">
+            <img class="header__avatar" src="{{ url_for('static', filename='my_photo.jpg') }}">
+            <h1>Piotr Krząstek</h1>
+            <p>Junior web developer</p>
+        </header>
+
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__list-element {{ 'nav__list-current' if request.path == url_for('projects.Projects')}}"><a href="{{ url_for('projects.Projects') }}">Projects</a> </li>
+                <li class="nav__list-element {{ 'nav__list-current' if request.path == url_for('about.About')}}"><a href="{{ url_for('about.About') }}">About me</a> </li>
+                <li class="nav__list-element {{ 'nav__list-current' if request.path == url_for('contact.Contact')}}"><a href="{{ url_for('contact.Contact') }}">Contact</a> </li>
+            </ul>
+        </nav>
+        {% block main %}
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        <div class="footer__left">
+            <p>Copyright © 2025 Piotr Krząstek. All rights reserved.</p>
+        </div>
+        <div class="footer__right">
+            <div class="footer__icons">
+                <a target="_blank" class="footer__logo" href="https://www.linkedin.com/in/krzastek">
+                    <img src="{{ url_for('static', filename='LinkedInIcon.png') }}" width="30" alt="LinkedIn logo"></a><a target="_blank" class="footer__logo" href="https://github.com/PiotrKrzastek">
+                    <img src="{{ url_for('static', filename='GitHubIcon.png') }}" width="30" alt="GitHub logo"></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
