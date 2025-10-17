@@ -1,58 +1,88 @@
 .main {
-    margin: 3rem 0;
-}
-
-.main__about-section-image {
-    transition: all .1s ease-in-out;
-    align-items: center;
-    margin: 1rem 0;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    margin: 1.5rem 0;
 }
 
 .main__about-section {
-    padding: 0 1rem;
+    padding: .5rem 2rem;
     transition: all .1s ease-in-out;
-    width: 80%;
+    width: 100%;
     margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.main__about-section-main {
-    transition: all .1s ease-in-out;
-    width: 80%;
-    margin: 1rem 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.main__about-section:hover, .main__about-section-image:hover, .main__about-section-main:hover {
-    transition: all .1s ease-in-out;
-    transform: scale(1.05);
 }
 
 .main__section-text {
-    padding: 0 1rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
+    margin-top: 1rem;
+    float: left;
     width: 65%;
 }
 
+.main__section-content-list{
+    margin-top: .5rem;
+    padding: 1rem;
+}
+
+.main__section-content-list-important{
+    font-weight: bold;
+    font-size: large;
+    color: var(--accent-color);
+}
+
+.main__side-block{
+    padding-inline: 1rem;
+    margin-top: 1rem;
+    background-color: var(--nav-background-color);
+    float: right;
+    width: 25%;
+    min-width: 11rem;
+    border-bottom: 6px solid var(--accent-color);
+}
+
+.main__side-block-header {
+    color: var(--accent-color-light);
+    font-size:x-large;
+    margin: .5rem 0;
+    margin-top: 1rem;
+}
+
+.main__side-block-content{
+    padding: 0;
+}
+
+.main__side-block-content li{
+    font-size: large;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main__about-section-main {
+    border-bottom: 6px solid var(--accent-color);
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
 .main__section-content {
+    text-wrap: pretty;
+    margin-top: 1rem;
     font-size: 18px
 }
 
 .main__section-header {
+    color: var(--accent-color-light);
     margin: 0 0 .5rem 0;
 }
+.main__about-section-links {
+    border-top: 6px solid var(--accent-color);
+    padding: 1rem 0;
+}
 
-.main__section-image {
-    border-radius: 10px;
+.main__image {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
-    width: 30%;
+    width: 50%;
     margin: auto;
 }
 
@@ -73,7 +103,33 @@
 }
 
 .main__section-link:hover {
+    transition: all .2s ease-in-out;
+    color: var(--link-color);
     text-decoration: underline;
+}
+
+.main__certificate-header {
+    text-align: center;
+    width: 100%;
+    margin: 1rem 0 .5rem 0;
+}
+
+.main__certificate {
+    background-color: var(--nav-background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 1rem auto;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+.main__certificate-image {
+    display: flex;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+    width: 50%;
+    margin: .5rem auto;
 }
 
 .main__banner {
@@ -89,7 +145,7 @@
 }
 
 .main__banner-glow {
-    box-shadow: 10px 0 60px 100px rgba(255, 255, 255, 1);
+    box-shadow: 10px 0 50px 100px var(--glow-color);
     width: 100%;
     margin: 0;
     bottom: 0;
@@ -99,36 +155,46 @@
 .bordered {
     border: 0.1rem solid #222222;
 }
+.main__name i {
+    fill: var(--accent-color);
+    margin: 0;
+}
+
 
 .main__name {
-    font-size: 22px;
+    display: flex;
+    color: var(--accent-color-light);
+    font-size: 28px;
     display: flex;
     font-weight: bold;
     align-items: center;
-    justify-content: center;
-}
-
-.main__link {
-    transition: all .2s ease-in-out;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 2.5rem;
-}
-
-.main__link:hover {
-    transition: all .2s ease-in-out;
-    font-size: 22px;
-    cursor: pointer;
+    margin-top: .5rem;
 }
 
 .centered {
     text-align: center;
 }
 
+.main__link {
+    display: flex;
+    flex-direction: column;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    color: var(--text-color);
+    margin-bottom: 2.5rem;
+}
+
+.main__link:hover {
+    transition: all .2s ease-in-out;
+    transform: translateX(.5rem);
+    cursor: pointer;
+    color: var(--link-color);
+}
+
 
 @media (max-width: 650px) {
     .main__about-section-image {
-        transition: all .1s ease-in-out
+        transition: all .1s ease-in-out;
         margin: 1rem 1rem;
         display: flex;
         flex-direction: column;

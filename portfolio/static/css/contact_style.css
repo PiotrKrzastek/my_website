@@ -7,21 +7,9 @@
 }
 
 .main__name {
+    color: var(--accent-color);
     display: flex;
     font-weight: bold;
     align-items: center;
     justify-content: center;
-}
-
-.main__link {
-    transition: all .2s ease-in-out;
-    text-decoration: none;
-    color: black;
-    margin-bottom: 2.5rem;
-}
-
-.main__link:hover {
-    transition: all .2s ease-in-out;
-    font-size: 22px;
-    cursor: pointer;
 }

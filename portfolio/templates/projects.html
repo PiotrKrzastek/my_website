@@ -9,7 +9,7 @@
 {% block main %}
     <main class="main">
         {% for project in projects %}
-            {{ project_card(project.technologies, project.description, url_for('static', filename=project.image), "/projects/" + project.slug, frame=True)}}
+            {{ project_card(project.technologies, project.description, url_for('static', filename=project.image), "/projects/" + project.slug)}}
         {% endfor %}
     </main>
 {% endblock %}

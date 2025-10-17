@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, abort
+from flask import Blueprint, render_template, abort, session
 
 projects = Blueprint("projects", __name__)
 
@@ -15,6 +15,8 @@ slugs = [project["slug"] for project in projects_list]
 
 @projects.route("/")
 def Projects():
+    if "theme" in session:
+        print(session["theme"])
     return render_template("projects.html", title="My projects", projects=projects_list)
 
 @projects.route("/<string:slug>")
