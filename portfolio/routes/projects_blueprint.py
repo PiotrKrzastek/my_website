@@ -4,8 +4,8 @@ projects = Blueprint("projects", __name__)
 
 projects_list = [
     {
-        "technologies": "Python | Flask",
-        "description": "My first ever portfolio project. Created it under the guidance of Jose Salvatierra during 'Web Developer Bootcamp with Flask and Python in 2024' Udemy course.",
+        "technologies": "Python | Flask | HTML | CSS | MongoDB",
+        "description": "Simple note taking app. Created it under the guidance of Jose Salvatierra during 'Web Developer Bootcamp with Flask and Python in 2024' Udemy course.",
         "image": "noteup.png",
         "slug": "noteup"
     }

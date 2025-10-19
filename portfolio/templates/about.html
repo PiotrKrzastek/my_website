@@ -13,56 +13,83 @@
         </div> -->
 
         <section class="main__about-section-main">    
-                <h1 class="main__section-header" >Introduction</h1>
+                <h1 class="main__section-header" >Introduction <i class="fa-solid fa-panorama main__section-header"></i></h1>
                 <p class="main__section-content">
-                    Hey! I’m Piotr, a junior developer who’s been passionate about coding since I was young. These days, I’m focused on building web applications and growing into a full-stack developer.
-                    Most of my work so far has been with Python and Flask, but I’ve also been picking up JavaScript and Rust along the way.
-                    I love experimenting with projects that challenge me and push me to learn something new.
+                    Hey! I’m Piotr, a junior developer who’s been passionate about coding since I was young. These days, I’m focused on building web applications and growing into a great back-end developer.
+                    Most of my work so far has been with Python specifically Flask and Django, but I’ve also been picking up JavaScript and Rust along the way.
+                    I love experimenting with projects that challenge me and push me to learn something new. My goal is to become a well-rounded full-stack developer, but I’m especially drawn to back-end development because I enjoy working with databases and server-side logic.
+                    When I’m not coding, I like to unwind by playing video games or spending time with my cat.
                 </p>    
         </section>
 
         <section class="main__about-section">
                 <div class="main__section-text">
-                <h1 class="main__section-header">My achievements and projects</h1>
-                <p class="main__section-content">
-                    Right now, I’m working on a school inventory system using Flask and MongoDB as well as a "Securenv", an app that allows you to securely manage your .envs in projects. 
-                    I am also sharpening my skills through courses and coding challenges on Codewars.
+                <h1 class="main__section-header">My projects <i class="fa-solid fa-list-check main__section-header"></i></h1>
+                <p class="main__section-content">  
                     So far, I’ve built apps like NoteUp, a simple note-taking tool, and Movies, an app for rating your favorite films. I’m continuously expanding my portfolio piece by piece.
                     Even though I enjoy back-end development the most, I’m also working on improving my front-end skills so I can create full-stack projects from start to finish.
+                    My portfolio is still growing, I’m proud of the progress even projects that are in works were able to teach me a lot.
                 </p>
-                </div>
+                </div>  
                 <div class="main__side-block">
-                <h3 class="main__side-block-header">Main skills: </h3>
+                <h3 class="main__side-block-header">Main skills <i class="fa-solid fa-dumbbell main__side-block-header"></i></h3>
                 <ul class="main__side-block-content">
-                    <li>Python</li>
-                    <li>Flask</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
+                    <li><i class="fa-brands fa-python"></i> Python</li>
+                    <li><i class="fa-brands fa-html5"></i> HTML</li>
+                    <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
+                    <li><i class="fa-solid fa-database"></i> NoSQL/SQL</li>
                 </ul>
             </div>
         </section>
 
-        <section class="main__about-section">    
-                <h1 class="main__section-header" >Full skills list</h1>
-                <p class="main__section-content">
-                    <ul class="main__section-content-list">
-                        <li><span class="main__section-content-list-important">Python</span> (Flask, Django, Pymongo, SQLAlchemy)</li>
-                        <li><span class="main__section-content-list-important">JavaScript</span> (basic knowledge)</li>
-                        <li><span class="main__section-content-list-important">Rust</span> (basic knowledge)</li>
-                        <li><span class="main__section-content-list-important">HTML5 & CSS3</span> (Flexbox, Grid, Responsive Design)</li>
-                        <li><span class="main__section-content-list-important">Databases:</span> MySQL, SQLite, MongoDB</li>
-                        <li><span class="main__section-content-list-important">Version Control:</span> Git & GitHub</li>
-                        <li>Basic knowledge of Docker and containerization</li>
-                        <li>Familiarity with RESTful API design and development</li>
-                        <li>Problem-solving skills honed through coding challenges on Codewars (4 kyu)</li>
-                    </ul>
-                </p>    
+        <section class="main__about-section">
+            <h1 class="main__section-header">Here is my kitty <i class="fa-solid fa-cat main__section-header"></i></h1>
+            <img class="main__image" src="{{url_for('static', filename='cat.JPG')}}" alt="My own kitty">
+        </section>
+
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >My achievements <i class="fa-solid fa-trophy main__section-header"></i></h1>
+            <p class="main__section-content">
+                One of my proudest achievements must be my ability to intuitively learn new programming languages and frameworks on my own.
+                My knowledge may not be too vast yet, but I’m a quick learner and always eager to take on new challenges.
+                I finished my high school diploma with a focus on IT, which laid a solid foundation for my coding journey.
+                Additionally, I’ve earned a certificate from Udemy for completing a comprehensive web development courses.
+                I am constatly pushing myself to improve and expand my skill set by taking on new projects and learning opportunities.
+            </p>
         </section>
 
         <section class="main__about-section">
-                <h1 class="main__section-header">Certificates:</h2>
+            <h1 class="main__section-header" >Next projects <i class="fa-solid fa-bullseye main__section-header"></i></h1>
+            <p class="main__section-content">
+                Looking ahead, I have several exciting projects in the pipeline. I’m currently working on a inventory management system designed to help school I graduated from.
+                So far project is mostly finished and I am really happy with how much I learned during its development. It required me to learn many new things like AWS S3 integration and user authentication using Microsoft Azure. 
+                More on that in this project section you can take a look at it <a class="main__section-link" target="_blank" href="{{url_for('projects.Projects')}}">here</a>.
+                Another project I plan to work on is a secure way to store and manage secrets and environment variables for developers.
+                This tool will help developers keep their sensitive information safe while still being easily accessible during development and deployment.
+                I’m excited about these upcoming projects and the opportunity to continue growing as a developer. Stay tuned for updates as I make progress on these initiatives!
+                Keep looking for more info in the <a class="main__section-link" target="_blank" href="{{url_for('projects.Projects')}}">project</a> section.
+            </p>
+        </section>
+
+        <section class="main__about-section">    
+                <h1 class="main__section-header" >Full skills list <i class="fa-solid fa-medal main__section-header"></i></h1>
+                <ul class="main__section-content-list">
+                    <li><span class="main__section-content-list-important">Python</span> (Flask, Django, Pymongo, SQLAlchemy)</li>
+                    <li><span class="main__section-content-list-important">JavaScript</span></li>
+                    <li><span class="main__section-content-list-important">Rust</span></li>
+                    <li><span class="main__section-content-list-important">HTML5 & CSS3</span></li>
+                    <li><span class="main__section-content-list-important">Databases:</span> MySQL, SQLite, MongoDB</li>
+                    <li><span class="main__section-content-list-important">Version Control:</span> Git & GitHub</li>
+                    <li>Basic knowledge of Docker and containerization</li>
+                    <li>Familiarity with RESTful API design and development</li>
+                    <li>Problem-solving skills honed through coding challenges on Codewars <span class="main__section-content-list-important">(4 kyu)</span></li>
+                </ul>
+        </section>
+
+
+        <section class="main__about-section">
+                <h1 class="main__section-header">Certificates <i class="fa-solid fa-certificate main__section-header"></i></h2>
                 <ul class="main__section-content">
                     <li class="main__certificate">
                         <a class="main__link" target="_blank" href="https://www.udemy.com/certificate/UC-52457cb8-ff16-43f7-9f2c-5556d5443b72/">
@@ -71,15 +98,6 @@
                         </a>
                     </li>
                 </ol>
-        </section>
-
-        <section class="main__about-section">
-            <h2 class="main__section-header" >Future goals</h2>
-            <p class="main__section-content">
-                I’m excited to keep growing as a developer and dive deeper into front-end frameworks like React.
-                I’m also curious about mobile app development and even exploring languages like Rust.
-                Outside of coding, I enjoy solving puzzles and coding challenges.
-            </p>
         </section>
     </main>
 

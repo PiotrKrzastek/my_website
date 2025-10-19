@@ -17,21 +17,22 @@
             <h1 class="main__section-header" >NoteUP</h1>
             <p class="main__section-content">
                 NoteUP is a simple web application where users can add notes to document their daily life. It’s built with HTML, CSS, Python, and Flask. This was my first project from the Udemy course
-                <strong><a class="main__section-link" target="_blank" href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">Web Developer Bootcamp with Flask and Python in 2024</a></strong>
+                <a class="main__section-link" target="_blank" href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">Web Developer Bootcamp with Flask and Python in 2024</a>
                 and at the same time my first professional step towards my full-stack developer journey.
             </p>
         </section>
 
         <section class="main__about-section">
             <div class="main__section-text">
-                <h2 class="main__section-header">Why was it written?</h2>
+                <h1 class="main__section-header">Features <i class="fa-solid fa-star main__section-header"></i></h1>
                 <p class="main__section-content">
-                   This app was mainly written for the sake of taking the course. I consider even smallest step towards advancement a victory.
-                   Even though this app is small and relatively easy to make I was sure there is something I could learn from this experience.
+                    NoteUP allows users to create and view their notes. The interface is clean and user-friendly, making it easy to manage notes efficiently.
+                    The app uses Flask to handle routing and server-side logic, while MongoDB is used for storing notes persistently.
+                    Overall, NoteUP serves as a foundational project that helped me understand the basics of web development and full-stack application architecture.
                 </p>
             </div>
             <div class="main__side-block">
-                <h3 class="main__side-block-header">Technologies: </h3>
+                <h3 class="main__side-block-header">Tech stack <i class="fa-solid fa-microchip main__side-block-header"></i> </h3>
                 <ul class="main__side-block-content">
                     <li>
                         <i class="fa-brands fa-python"></i><p>Python/Flask</p>
@@ -50,28 +51,69 @@
         </section>
 
         <section class="main__about-section">
-                <h2 class="main__section-header" >What I learned?</h2>
+                <h1 class="main__section-header" >Screenshots <i class="fa-solid fa-image main__section-header"></i></h2>
                 <p class="main__section-content">
-                    Even before developing this app, I knew some of the technologies used. I still learned new things — for example, using
-                    <strong><a target="_blank"  class="main__section-link" href="https://www.figma.com">Figma</a></strong> to create clear, responsive designs and prototypes before writing any code.
-                    I’m also excited to use these skills in future projects and collaborate effectively with teammates.
+                    Since this was my first project, the design is quite simple and minimalistic, focusing more on functionality than aesthetics.
+                    It only contains one main page where users can add and view their notes.
                 </p>
+                <img class="main__image" src="{{url_for('static', filename='noteup.png')}}" alt="NoteUp screenshot - main page">
         </section>
 
         <section class="main__about-section">
-            <h2 class="main__section-header" >Future</h2>
+            <h1 class="main__section-header" >Quickstart <i class="fa-solid fa-play main__section-header"></i></h1>
             <p class="main__section-content">
-                While I plan to focus on new projects, if I were to expand this app further, I would add a user system to allow personalized accounts and note management.
-                Each project builds on the last, so future developments will continue to improve my skills and approach.
+                To run NoteUP locally, make sure you have Python and Flask installed. Clone the repository from GitHub and navigate to the project directory.
+                You will also need to have MongoDB set up and running on your machine or in the cloud to store the notes. All neccessary libraries can be installed via pip using requirements.txt file.
+                in your .env you need to set MONGO_URI variable to your local MongoDB instance and a SECRET_KEY variable containing your own secret key.
+                to run simply create a file main.py and import app to use app.run()
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Security <i class="fa-solid fa-shield main__section-header"></i></h1>
+            <p class="main__section-content">
+                Since NoteUP is a simple note-taking application without user authentication, security measures are minimal.
+                For production use, it is recommended to implement user authentication and authorization to ensure that notes are private and secure.
+                Additionally, using HTTPS for secure data transmission is advisable.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header">Roadmap <i class="fa-solid fa-road main__section-header"></i></h1>
+            <div class="roadmap">
+                <ul class="roadmap__list">
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Initial Release with basic note-taking.</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Mobile-friendly design. (responsive)</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item--current">
+                        <span class="roadmap__bullet"></span>
+                        <a class="roadmap__text">Support for this project has ended. I feel no reason to keep this simple project going and want to focus on my more advanced and helpful ideas.</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Troubleshooting <i class="fa-solid fa-wrench "></i></h1>
+            <p class="main__section-content">
+                If you encounter any issues while running NoteUP, ensure that all dependencies are correctly installed and that your MongoDB instance is accessible.
+                Check the console for any error messages that can provide insights into what might be going wrong.
+                If problems persist, consider reaching out via the GitHub repository's issue tracker for assistance.
+                I will listen to any issues reported there and try to help as much as I can. After any question I will add a FAQ section here.
             </p>
         </section>
 
         <section class="main__about-section-links">
                     <p class="main__name"><i class="fa-brands fa-github main__name"></i>Repository:</p>
-                    <a class="main__link" style="font-size: 26px;" target="_blank" href="https://github.com/PiotrKrzastek/NoteUp-project">github.com/PiotrKrzastek/NoteUp-project</a>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://github.com/PiotrKrzastek/NoteUp-project">github.com/PiotrKrzastek/NoteUp-project</a>
                     
                     <p class="main__name"><i class="fa-solid fa-earth-americas main__name"></i>Live website</p>
-                    <a class="main__link" style="font-size: 26px;" target="_blank" href="https://noteup-project.onrender.com/">noteup-project.onrender.com/</a>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://noteup-project.onrender.com/">noteup-project.onrender.com/</a>
         </section>
 
     </main>
