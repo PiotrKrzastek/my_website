@@ -1,0 +1,119 @@
+{% from "macros/project_macros.jinja2" import project_card %}
+
+{% extends "base.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article_style.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__banner">
+            <img class="main__banner-image" src="{{ url_for('static', filename='movies.png') }}">
+            <h1 class="main__banner-glow"></h1>
+        </div>
+
+        <section class="main__about-section-main">
+            <h1 class="main__section-header" >Movies</h1>
+            <p class="main__section-content">
+                Movies is a really simple web application where users can track their last watched movies and it's ratings as well as share this information with friends.
+                This was one of my key projects from the Udemy course <a class="main__section-link" target="_blank" href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">Web Developer Bootcamp with Flask and Python in 2024</a>.
+                It can be considered as my final test before completing the course and earning my certificate.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <div class="main__section-text">
+                <h1 class="main__section-header">Features <i class="fa-solid fa-star main__section-header"></i></h1>
+                <p class="main__section-content">
+                    Movies allows users to create a free account and add any movie they want to keep their ratings and last watch dates in one place.
+                    You can completely customize your movie page by adding description, short video, cast, genres and series. 
+                    That way you can know exactly when was the last time you watched a particular movie and change it's rating whenever you feel like it.
+                    You could as well send your friends a link to your movie so they can see your rating and the way you customized it's page.
+                </p>
+            </div>
+            <div class="main__side-block">
+                <h3 class="main__side-block-header">Tech stack <i class="fa-solid fa-microchip main__side-block-header"></i> </h3>
+                <ul class="main__side-block-content">
+                    <li>
+                        <i class="fa-brands fa-python"></i><p>Python/Flask</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-html5"></i><p>HTML</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i><p>CSS</p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-database"></i><p>MongoDB</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section">
+                <h1 class="main__section-header" >Screenshots <i class="fa-solid fa-image main__section-header"></i></h2>
+                <p class="main__section-content">
+                    The style on this website is the same as the one in the course since I knew im not gonna develop more on this and used it as a practice and challenge for my CSS skills.
+                    Regardless it contains two themes dark and light you can use one or the other depending on your preferences. 
+                    The site is really simple but I tried to make it as pretty as I can since CSS is not something I enjoy writing.
+                </p>
+                <img class="main__image" src="{{url_for('static', filename='movies.png')}}" alt="movies screenshot - main page">
+                <img class="main__image" src="{{url_for('static', filename='movies_screenshot1.png')}}" alt="movies screenshot - movie page example">
+                <img class="main__image" src="{{url_for('static', filename='movies_screenshot2.png')}}" alt="movies screenshot - register page">
+                <img class="main__image" src="{{url_for('static', filename='movies_screenshot3.png')}}" alt="movies screenshot - white theme add movie page">
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Quickstart <i class="fa-solid fa-play main__section-header"></i></h1>
+            <p class="main__section-content">
+                To host this app, simply clone the repo at the bottom of this site, then you just install all the requirements in pip.
+                If you did previous steps create .env file in your project directory with DBURI inside where you pass your Mongo database URI. Once done you just simply use "flask run" in your command line to run the application.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Security <i class="fa-solid fa-shield main__section-header"></i></h1>
+            <p class="main__section-content">
+                Movies takes user password security seriously. All sensitive data in the database is hashed using the <a target="_blank" class="main__section-link" href="https://passlib.readthedocs.io/en/stable/">passlib</a> python library, ensuring passwords are stored securely.
+                <br><br>
+                It's important to note that if you share a direct link to a specific movie page with another registered user, that user will be able to modify the content of that page. This is due to the way the application was originally designed during the course. While I could implement access controls to restrict editing, I've chosen to focus my development efforts on other projects with higher priority.
+                <br><br>
+                If you have concerns about this behavior, you are welcome to implement your own access controls and host the application privately, or submit a pull request with your improvements.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header">Roadmap <i class="fa-solid fa-road main__section-header"></i></h1>
+            <div class="roadmap">
+                <ul class="roadmap__list">
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Initial Release with user authentication and every planned feature.</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item--current">
+                        <span class="roadmap__bullet"></span>
+                        <a class="roadmap__text">Support for this project has ended. As sad as it sounds for now I feel like I should focus on my other apps like ekonomik inventory or securenv to better enhance my skills as a developer.</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Troubleshooting <i class="fa-solid fa-wrench "></i></h1>
+            <p class="main__section-content">
+               If something doesn't work make sure you installed everything from requirements.txt and your .env has exactly one variable DBURI.
+               Once you made sure you have set up everything perfectly and app still doesn't work or works but not as intended feel free to <a target="_blank" class="main__section-link" href="{{url_for('contact.Contact')}}">contact me</a> and I will do my best to help you and possibly create a following FAQ section.
+            </p>
+        </section>
+
+        <section class="main__about-section-links">
+                    <p class="main__name"><i class="fa-brands fa-github main__name"></i>Repository:</p>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://github.com/PiotrKrzastek/movie_watchlist">github.com/PiotrKrzastek/movie_watchlist</a>
+                    
+                    <p class="main__name"><i class="fa-solid fa-earth-americas main__name"></i>Live website</p>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://movie-watchlist-sgo6.onrender.com/home">movie-watchlist-sgo6.onrender.com/home</a>
+        </section>
+
+    </main>
+{% endblock %}

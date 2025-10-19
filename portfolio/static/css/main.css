@@ -203,9 +203,13 @@ a {
 
     .footer {
     flex-direction: column;
+    justify-content: center;
     height: 6rem;
     }
 
+    .footer__left{
+        margin-bottom: 1rem;
+    }
 }
 
 @keyframes slideUpFade {
