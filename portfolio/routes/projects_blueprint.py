@@ -34,6 +34,6 @@ def Projects():
 @projects.route("/<string:slug>")
 def Projects_noteup(slug):
     if slug in slugs:
-        return render_template(slug + ".html", title="My projects - NoteUP", page="")
+        return render_template(slug + ".html", title=f"My projects - {slug}", page="")
     else:
         abort(404)
