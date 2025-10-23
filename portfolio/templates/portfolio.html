@@ -1,0 +1,147 @@
+{% from "macros/project_macros.jinja2" import project_card %}
+
+{% extends "base.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article_style.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__banner">
+            <img class="main__banner-image" src="{{ url_for('static', filename='portfolio.png') }}">
+            <h1 class="main__banner-glow"></h1>
+        </div>
+
+        <section class="main__about-section-main">
+            <h1 class="main__section-header" >My portfolio</h1>
+            <p class="main__section-content">
+                My own portfolio page where I store all public information about my progress, experience and results of every idea. This was started as a project from the Udemy course
+                <a class="main__section-link" target="_blank" href="https://www.udemy.com/course/web-developer-bootcamp-flask-python/">Web Developer Bootcamp with Flask and Python in 2024</a>
+                but later on I applied many of my ideas to create a completely unique website.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <div class="main__section-text">
+                <h1 class="main__section-header">Features <i class="fa-solid fa-star main__section-header"></i></h1>
+                <p class="main__section-content">
+                    This website was made to let everyone know basic information about me and my achievements, projects and skills.
+                    I can keep documenting every step I do as a developer as well as share my unique ideas.
+                    The app is going to be constantly update so every roadmap and description is definitely up to date.
+                </p>
+            </div>
+            <div class="main__side-block">
+                <h3 class="main__side-block-header">Tech stack <i class="fa-solid fa-microchip main__side-block-header"></i> </h3>
+                <ul class="main__side-block-content">
+                    <li>
+                        <i class="fa-brands fa-python"></i><p>Python/Flask</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-html5"></i><p>HTML</p>
+                    </li>
+                    <li>
+                        <i class="fa-brands fa-css3-alt"></i><p>CSS</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section">
+                <h1 class="main__section-header" >Screenshots <i class="fa-solid fa-image main__section-header"></i></h2>
+                <p class="main__section-content">
+                    I did my best to make this website look great from simple animations to color pallete.
+                    I really hope everyone visiting and reading this is going to enjoy my work.
+                </p>
+                <img class="main__image" src="{{url_for('static', filename='portfolio.png')}}" alt="Portfolio screenshot - about me page">
+                <img class="main__image" src="{{url_for('static', filename='portfolio_screenshot1.png')}}" alt="Portfolio screenshot - projects page">
+                <img class="main__image" src="{{url_for('static', filename='portfolio_screenshot2.png')}}" alt="Portfolio screenshot - contact page">
+                <img class="main__image" src="{{url_for('static', filename='portfolio_screenshot3.png')}}" alt="Portfolio screenshot - light mdoe projects page">
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Design and development <i class="fa-solid fa-pen main__section-header"></i></h1>
+            <p class="main__section-content">
+                To be completely honest this app started as a giant mess. I tried to mix my own style with the style shown in the course so initial version ended up feeling completely bland and unpolished.
+                As the time went I decided I actually need to take care of here since it quite literally is my own business card and got back to the development.
+                <br><br>
+                I went with a dark and light mode to add a bit more options of customizability with the dark one being the default.
+                For the accent color I asked few of my friends and my future wife allowing them to choose one of few colors. 
+                All of them picked purple so I went with a really nice purple color and simple animations using CSS to make things look more proffesional and fluid.
+                <br><br>
+                Thats how the version you look at right now came to life and to be completely frank I do enjoy my work this time.
+                I hope others will enjoy it as much as I do!
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Learning <i class="fa-solid fa-pen main__section-header"></i></h1>
+            <p class="main__section-content">
+                This website is the first project I can actually say I learned a lot from not by just mastering my already existing skills but by learning many new skills. 
+                I tried experimenting with any CSS animations and transitions which I believe turned out quite well. 
+                Using even easy Translates or Transition really could make a difference in the app presentation.
+                I learned how to use basic keyframes, animation and transitions in CSS.
+                <br><br>
+                Next thing I learned in here was the use of jinja macros.
+                I decided I could just use a macro for project cards in projects section to make it more reusable and easy to loop over.
+                I can easily pass many values into the macro to generate a perfect card for any project.
+                <br><br>
+                Last important thing I learned or at the very least the last thing I want to mention is actually something that I feel like is really a underrated concept - design and use of colors.
+                Yes, it may sound simple but before this project I really did not understand the importance of accent color usage and many slight design choices like section seperators.
+                Every project I did myself before was a complete black and white design which for me felt simple and enough, but as the time goes I realized that use of a color might make app design go from good to amazing.
+                <br><br>
+                Even though I enjoy writing back-end much more and have a hard time with designing I am really proud of how much I learned in this particular project.
+                It really elevated my thinking not only as a developer but as a designer. I cannot wait to learn even more things to improve at what I love!
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header">Roadmap <i class="fa-solid fa-road main__section-header"></i></h1>
+            <div class="roadmap">
+                <ul class="roadmap__list">
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Initial Release while following the course.</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Mobile-friendly design.</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Visual design upgrade with lots of new colors, themes and animations.</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Rewrite all the sections in NoteUp and about me to make it much more convient to read and understand</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Add a new subpage for Movies app</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Add a new subpage for this portfolio website</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item--current">
+                        <span class="roadmap__bullet"></span>
+                        <a class="roadmap__text">Add a new subpage for my Ekonomik inventory app</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item">
+                        <span class="roadmap__bullet"></span>
+                        <a class="roadmap__text">Add a new subpage for my Securenv app</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section-links">
+                    <p class="main__name"><i class="fa-brands fa-github main__name"></i>Repository:</p>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://github.com/PiotrKrzastek/my_website">github.com/PiotrKrzastek/my_website</a>
+                    
+                    <p class="main__name"><i class="fa-solid fa-earth-americas main__name"></i>Live website</p>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="www.krzastek.com">www.krzastek.com</a>
+        </section>
+
+    </main>
+{% endblock %}
