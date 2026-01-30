@@ -1,0 +1,113 @@
+{% from "macros/project_macros.jinja2" import project_card %}
+
+{% extends "base.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/article_style.css') }}">
+{% endblock %}
+
+{% block main %}
+    <main class="main">
+        <div class="main__banner">
+            <img class="main__banner-image" src="{{ url_for('static', filename='noteup.png') }}">
+            <h1 class="main__banner-glow"></h1>
+        </div>
+
+        <section class="main__about-section-main">
+            <h1 class="main__section-header" >SecurEnv</h1>
+            <p class="main__section-content">
+                SecurEnv is a command‑line tool for managing environment variables in a clean and structured way. 
+                I built it because working with .env files across different projects often felt messy and inconsistent. 
+                With SecurEnv, I can create separate branches of environment configurations, import and export .env files, and keep everything validated and normalized. 
+                The project is still in active development and I’m treating it as a long‑term tool in my own workflow, not just a quick experiment.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <div class="main__section-text">
+                <h1 class="main__section-header">Features <i class="fa-solid fa-star main__section-header"></i></h1>
+                <p class="main__section-content">
+                    SecurEnv provides a clean and structured way to work with environment variables directly from the command line. 
+                    The tool lets me manage variables through intuitive commands such as adding, removing, listing, packing, and loading them, which makes working with .env files far more organized than editing them manually. 
+                    It also supports separate branches of environment configurations, allowing me to switch between different setups without overwriting anything. 
+                    Importing and exporting .env files is fully supported, including the ability to work with custom paths, which makes it easy to integrate SecurEnv into different projects or workflows. 
+                    Under the hood, the tool automatically normalizes and validates keys and values to prevent formatting mistakes and keep everything consistent. 
+                    I also spent a lot of time polishing the CLI experience, adding meaningful error messages, confirmation prompts, and color‑coded output to make the tool feel smooth and predictable. Most importantly, SecurEnv works reliably across both Windows and Linux, which was a key goal from the beginning.
+                </p>
+            </div>
+            <div class="main__side-block">
+                <h3 class="main__side-block-header">Tech stack <i class="fa-solid fa-microchip main__side-block-header"></i> </h3>
+                <ul class="main__side-block-content">
+                    <li>
+                        <i class="fa-brands fa-python"></i><p>Python</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Learning <i class="fa-solid fa-play main__section-header"></i></h1>
+            <p class="main__section-content">
+                Working on SecurEnv taught me a lot about designing real developer tools rather than just writing scripts. 
+                I learned how important it is to structure a CLI around clear commands, predictable behavior, and helpful feedback. 
+                A big part of the project was refining the internal architecture so that every feature—branching, validation, importing, exporting—has a dedicated place and doesn’t create hidden side effects. 
+                I also spent time understanding cross‑platform differences, especially around filesystem behavior on Windows and Linux, which helped me make the tool more reliable. 
+                This project pushed me to think more about long‑term maintainability, clean abstractions, and how to design a tool that feels professional from the moment you run it. 
+                It also made me more aware of security considerations and how much planning is required before introducing something like encryption. 
+                Overall, SecurEnv has been one of the most valuable learning experiences in terms of architecture, UX for developers, and disciplined workflow.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Security <i class="fa-solid fa-shield main__section-header"></i></h1>
+            <p class="main__section-content">
+               SecurEnv currently focuses on safe and predictable handling of environment variables without attempting to implement encryption prematurely. 
+               All operations are designed to avoid accidental data loss, and the tool validates input before writing anything to disk. 
+               I’m actively researching how to introduce encryption in a way that is both secure and practical for local use. The challenge is not the encryption itself, but designing a reliable system for key management, cross‑platform behavior, and recovery in case of user mistakes. 
+               I want to make sure the architecture is solid before committing to it, because a poorly designed encryption layer can create more risk than it solves. 
+               If I find a clean and safe approach, encryption will become a core part of SecurEnv. 
+               If not, I’ll focus fully on making it an excellent local secret manager with strong UX and predictable behavior. 
+               I’m also exploring the possibility of implementing some security‑critical components in Rust in the future, but this is still in the research phase.
+            </p>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header">Roadmap <i class="fa-solid fa-road main__section-header"></i></h1>
+            <div class="roadmap">
+                <ul class="roadmap__list">
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Initial Release with basic note-taking.</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item-completed">
+                        <span class="roadmap__bullet"><i class="fa-solid fa-check"></i></span>
+                        <a class="roadmap__text">Mobile-friendly design. (responsive)</a>
+                    </li>
+                    <li class="roadmap__item roadmap__item--current">
+                        <span class="roadmap__bullet"></span>
+                        <a class="roadmap__text">Support for this project has ended. I feel no reason to keep this simple project going and want to focus on my more advanced and helpful ideas.</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main__about-section">
+            <h1 class="main__section-header" >Troubleshooting <i class="fa-solid fa-wrench "></i></h1>
+            <p class="main__section-content">
+                If you encounter any issues while running NoteUP, ensure that all dependencies are correctly installed and that your MongoDB instance is accessible.
+                Check the console for any error messages that can provide insights into what might be going wrong.
+                If problems persist, consider reaching out via the GitHub repository's issue tracker for assistance.
+                I will listen to any issues reported there and try to help as much as I can. After any question I will add a FAQ section here.
+            </p>
+        </section>
+
+        <section class="main__about-section-links">
+                    <p class="main__name"><i class="fa-brands fa-github main__name"></i>Repository:</p>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://github.com/PiotrKrzastek/NoteUp-project">github.com/PiotrKrzastek/NoteUp-project</a>
+                    
+                    <p class="main__name"><i class="fa-solid fa-earth-americas main__name"></i>Live website</p>
+                    <a class="main__link" style="font-size: 24px;" target="_blank" href="https://noteup-project.onrender.com/">noteup-project.onrender.com/</a>
+        </section>
+
+    </main>
+{% endblock %}
