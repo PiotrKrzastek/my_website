@@ -23,4 +23,4 @@ This project serves as a central hub for my professional identity. To ensure the
 * **Logic:** Jinja2 Macros for modularity
 
 🚀 Live Demo
-Visit the live version at: [krzastek.com](www.krzastek.com)
+Visit the live version at: [www.krzastek.com](https://www.krzastek.com)
